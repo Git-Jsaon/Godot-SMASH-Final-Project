@@ -1,0 +1,165 @@
+[gd_scene load_steps=19 format=3 uid="uid://dsp68212ty7t3"]
+
+[ext_resource type="Texture2D" uid="uid://ckupb3imkaol6" path="res://button-main-menu.png" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://8y2hypfdj7x7" path="res://animated_sprite_2d.gd" id="2_7vrkn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06t4h"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vrkn"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu7sn"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jix8l"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glbon"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkkf"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe12f"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qtwp"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy7ct"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o4t1"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k4wn"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(1000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5v2v"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(1100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotk1"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(1200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w44g7"]
+atlas = ExtResource("1_7vrkn")
+region = Rect2(1300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cm266"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06t4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vrkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu7sn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jix8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glbon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe12f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qtwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy7ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k4wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5v2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iotk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w44g7")
+}],
+"loop": true,
+"name": &"start_up",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8g3n"]
+animations = []
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 77.0
+offset_right = 360.0
+offset_bottom = -48.0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/VBoxContainer/Button"]
+position = Vector2(252, 103)
+scale = Vector2(6.96, 6.54)
+sprite_frames = SubResource("SpriteFrames_cm266")
+animation = &"start_up"
+frame_progress = 0.891486
+script = ExtResource("2_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+z_index = -4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 7.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/ColorRect"]
+position = Vector2(578, 301)
+scale = Vector2(0.2266, 0.273169)
+sprite_frames = SubResource("SpriteFrames_g8g3n")
+animation = &""

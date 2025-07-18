@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhnhpv23pjy6p"]
+
+[ext_resource type="AudioStream" uid="uid://3umxdrpq0sh2" path="res://scary-forest-90162.mp3" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://wnb4jxverguh" path="res://Free Pixel Art Forest/PNG/Background layers/Layer_0011_0.png" id="2_0e48y"]
+
+[sub_resource type="AudioStream" id="AudioStream_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStream_wtcfe")
+volume_db = 0.305
+
+[node name="Scary-forest-90162" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_wtcfe")
+mix_target = 1
+parameters/looping = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Layer00110" type="Sprite2D" parent="."]
+position = Vector2(1642, -24)
+scale = Vector2(3.89655, 2.90069)
+texture = ExtResource("2_0e48y")
